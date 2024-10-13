@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"> <!-- Force use of the car-ui-lib library despite the minSdkVersion mismatch -->
+    <uses-sdk tools:overrideLibrary="com.android.car.ui" />
+
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:name=".Hilt.Applications"
@@ -18,13 +28,7 @@
         android:theme="@style/Theme.RetrofitRepository"
         tools:targetApi="31">
         <activity
-            android:name=".View.DataInsert"
-            android:exported="false" />
-        <activity
-            android:name=".View.DataUpdate"
-            android:exported="false" />
-        <activity
-            android:name=".View.DataVeiw"
+            android:name=".View.LanguageTranslate"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,6 +36,31 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".View.AmbulanceLayout"
+            android:exported="false"
+            android:label="@string/title_activity_maps" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBxQ0jfZgP-zau38gzx6hvzzXs2JKgW6Os" />
+
+
+        <activity
+            android:name=".View.NurseLayout"
+            android:exported="false" />
+        <activity
+            android:name=".View.DoctorLayout"
+            android:exported="false" />
+        <activity
+            android:name=".View.DataVeiw"
+            android:exported="false" />
+        <activity
+            android:name=".View.DataInsert"
+            android:exported="false" />
+        <activity
+            android:name=".View.DataUpdate"
+            android:exported="false" />
     </application>
 
 </manifest>
