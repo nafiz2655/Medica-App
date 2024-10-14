@@ -2,7 +2,10 @@ package com.example.medical.Retrofit.ServiceHelper;
 
 
 import com.example.medical.Model.AmbulanceModel;
+import com.example.medical.Model.BloodModel;
 import com.example.medical.Model.DoctorModel;
+import com.example.medical.Model.GroopModel;
+import com.example.medical.Model.HospitalModel;
 import com.example.medical.Model.NurseModel;
 import com.example.medical.Retrofit.ModelRetrofit.DeleteDataModel;
 import com.example.medical.Retrofit.ModelRetrofit.GetDataModel;
@@ -46,4 +49,13 @@ public interface Helper {
 
     @GET("getambulancedata.php")
     Call<List<AmbulanceModel>> getAmbulanceData();
+
+    @GET("hospital.php")
+    Call<List<HospitalModel>> getHostitalData();
+
+    @GET("blood.php")
+    Call<List<BloodModel>> getBloodData();
+
+    @GET("groop.php")
+    Call<List<GroopModel>> getGroopData();
 }

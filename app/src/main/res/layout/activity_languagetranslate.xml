@@ -37,7 +37,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/india"
+            android:src="@drawable/usa"
             />
     </androidx.cardview.widget.CardView>
 
@@ -58,6 +58,7 @@
         android:layout_above="@+id/v_bangla"
         android:orientation="vertical"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+
         />
 
 </RelativeLayout>

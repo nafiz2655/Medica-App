@@ -68,6 +68,8 @@ dependencies {
 
 
 
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.google.mlkit:translate:17.0.1'
 
 
 

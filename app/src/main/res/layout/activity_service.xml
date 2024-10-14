@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.Service">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:elevation="10dp"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="20sp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#c7ecee"
+            >
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/profile_image"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:src="@drawable/nafiz"
+                app:civ_border_width="2dp"
+                android:layout_margin="10dp"
+                app:civ_border_color="#2196F3"/>
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nafiz Ahmed (A+)"
+                android:textSize="20sp"
+                android:layout_below="@id/profile_image"
+                android:layout_marginLeft="10dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kanchercall,\nShoilkupa,Jhenaidah"
+                android:textSize="12sp"
+                android:layout_below="@id/name"
+                android:layout_marginLeft="10dp"
+                />
+
+
+            <TextView
+                android:id="@+id/emergency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Emergency"
+                android:textSize="30sp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:paddingLeft="20sp"
+                android:paddingRight="15dp"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:background="@drawable/bakc"
+                />
+
+
+
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <GridView
+        android:id="@+id/grid_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/card"
+        android:numColumns="2"
+        />
+
+
+</RelativeLayout>

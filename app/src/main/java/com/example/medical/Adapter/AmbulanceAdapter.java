@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.medical.Model.AmbulanceModel;
+import com.example.medical.Model.HospitalModel;
 import com.example.medical.R;
 
 import java.util.ArrayList;
